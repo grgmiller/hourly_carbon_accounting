@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/461343198.svg)](https://zenodo.org/badge/latestdoi/461343198)
+
 # General Information
 
 Title of Project: Hourly accounting of carbon emissions from electricity consumption
