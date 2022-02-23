@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/461343198.svg)](https://zenodo.org/badge/latestdoi/461343198)
+
 # General Information
 
 Title of Project: Hourly accounting of carbon emissions from electricity consumption
@@ -102,7 +104,3 @@ conda env create -f emissions.yml
 Due to the size of the NREL dataset, running this code will require at least 32GB of RAM (64GB recommended) to avoid Memory Errors.
 
 Run each of the notebooks in `code` in their numbered order. This repository does not contain any of the input data files. Each notebook in `code` describes the source for each data file so that the user can download these files on their local machine. 
-
-### Download a GIS
-
-Some of the GIS shapefiles downloaded for this research require manual edits or analysis using GIS software. We used the open source [QGIS software](https://www.qgis.org/en/site/)
