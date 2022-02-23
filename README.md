@@ -23,6 +23,30 @@ Licenses/restrictions placed on the data: MIT License
 This repository contains code to reproduce the results in the paper "Hourly Accounting of Carbon Emissions from Consumed Electricity", by Gregory J. Miller, Kevin Novan, and Alan Jenn. Environmental Research Letters. (in review)
 
 
+# Links to download source data
+
+code/1_explore_CAISO_emission_resolution.ipynb
+
+- [5-minute interval emissions data from CAISO](https://raw.githubusercontent.com/grgmiller/CAISO_data/master/CAISOdata.csv)
+
+code/2_download_singularity_CI_data.ipynb
+
+- [Sign up for an API key for the Carbonara API](https://carbonara.singularity.energy/app/signup)
+
+code/3_impute_missing_CI_data.ipynb and code/4_visualize_CI_and_fuel_mix_data.ipynb
+- [EIA-930 Balancing data for Jan-Jun 2019](https://www.eia.gov/electricity/gridmonitor/sixMonthFiles/EIA930_BALANCE_2019_Jul_Dec.csv)
+- [EIA-930 Balancing data for Jul-Dec 2019](https://www.eia.gov/electricity/gridmonitor/sixMonthFiles/EIA930_BALANCE_2019_Jan_Jun.csv)
+
+code/5_construct_geographic_crosswalks.ipynb
+- [EPA eGRID2019 data](https://www.epa.gov/sites/default/files/2021-02/egrid2019_data.xlsx)
+- [Electric Planning Areas Shapefile](https://hifld-geoplatform.opendata.arcgis.com/datasets/geoplatform::electric-planning-areas-1/explor)
+- [Climate Zones shapefile](https://atlas.eia.gov/datasets/eia::climate-zones-doe-building-america-program/explore?location=35.902577%2C-95.221420%2C4.90)
+- 2019 U.S. Census Tracts shapefile can be downloaded from [IPUMS NHGIS](https://www.nhgis.org/) after registering for an account
+- [NREL End-Use Load Profiles for the U.S. Building Stock](https://data.openei.org/s3_viewer?bucket=oedi-data-lake&prefix=nrel-pds-building-stock%2Fend-use-load-profiles-for-us-building-stock%2F)
+
+code/8_explore_LBNL_demand_data.ipynb
+- [LBNL 2025 California Demand Response Potential Study, Phase 2 data](https://buildings.lbl.gov/download-page-2025-california-demand-response)
+
 # Repository Overview
 
 #### code
@@ -78,3 +102,7 @@ conda env create -f emissions.yml
 Due to the size of the NREL dataset, running this code will require at least 32GB of RAM (64GB recommended) to avoid Memory Errors.
 
 Run each of the notebooks in `code` in their numbered order. This repository does not contain any of the input data files. Each notebook in `code` describes the source for each data file so that the user can download these files on their local machine. 
+
+### Download a GIS
+
+Some of the GIS shapefiles downloaded for this research require manual edits or analysis using GIS software. We used the open source [QGIS software](https://www.qgis.org/en/site/)

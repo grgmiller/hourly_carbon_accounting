@@ -74,7 +74,7 @@ def load_doe_demand_data(tmy3, ef_year):
         bas_for_tmy3 = list(tmy3[tmy3['tmy3_usaf_code'] == usaf]['ba_code'].unique())
 
         # LOAD COMMERCIAL DATA
-        com_dir = 'A:/Research/COMMERCIAL_LOAD_DATA_E_PLUS_OUTPUT'
+        com_dir = '../data/downloaded/COMMERCIAL_LOAD_DATA_E_PLUS_OUTPUT'
 
         # get the name of the folder in the commercial building directory that matches the usaf code
         folder_name = [f for f in os.listdir(com_dir) if int(
@@ -123,7 +123,7 @@ def load_doe_demand_data(tmy3, ef_year):
                 demand = demand.append(data, ignore_index=True)
 
         # LOAD RESIDENTIAL DATA
-        res_dir = 'A:/Research/RESIDENTIAL_LOAD_DATA_E_PLUS_OUTPUT'
+        res_dir = '../data/downloaded/RESIDENTIAL_LOAD_DATA_E_PLUS_OUTPUT'
 
         # there are LOW, BASE, and HIGH load models
         load_models = ['LOW','BASE','HIGH']
@@ -219,7 +219,7 @@ def load_lbnl_demand_data(ba_list):
                       }
 
     # we will use 1-in-2 profiles, representing a typical weather year, rather than the 1-in-10 profiles, which represent a "hot" year
-    lbnl_dir = 'A:/Research/lbnl-load-enduse-shapes/lbnl-load-enduse-shapes/anonymized_1in2_actual_actual_2014/'
+    lbnl_dir = '../data/downloaded/lbnl-load-enduse-shapes/lbnl-load-enduse-shapes/anonymized_1in2_actual_actual_2014/'
 
     # create a blank dataframe
     lbnl_demand = pd.DataFrame()

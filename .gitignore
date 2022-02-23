@@ -3,7 +3,6 @@ data/api_credentials.csv
 data/downloaded/*
 data/manual/gis/
 data/processed/*
-results/figures/*
 
 
 # Visual Studio Code
